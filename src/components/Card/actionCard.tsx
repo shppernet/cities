@@ -1,4 +1,5 @@
 import { cn } from "@/helpers/utills";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import * as React from "react";
 
@@ -10,6 +11,8 @@ export interface IActionCardProps {
 }
 
 export default function ActionCard(props: IActionCardProps) {
+  const localActive = useLocale();
+
   return (
     <div
       className={cn(
@@ -33,7 +36,13 @@ export default function ActionCard(props: IActionCardProps) {
       </div>
 
       {/* details */}
-      <div className="flex flex-col flex-nowrap gap-[10px] xl:gap-[20px] w-[330px] md:w-[392px] ">
+      <div
+        className={cn(
+          `flex flex-col flex-nowrap gap-[10px] xl:gap-[20px] w-[330px] md:w-[392px]
+          ${localActive == "ar" ? " text-right  w-[330px] md:w-[450px]" : ""}
+          `
+        )}
+      >
         <h2 className="text-xl  md:text-[50px] font-bold tracking-[-1px] lg:tracking-[-2px] leading-[29px] md:leading-[60px] text-[#333333] ">
           {props.title}
         </h2>

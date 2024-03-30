@@ -2,10 +2,13 @@
 import InfoCard from "@/components/Card/infoCard";
 import * as React from "react";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 
 export interface IInfoCardSectionProps {}
 
 export default function InfoCardSection(props: IInfoCardSectionProps) {
+  const localActive = useLocale();
+  const t = useTranslations("infoCards");
   return (
     <section className="flex flex-col md:flex-row  flex-nowrap justify-center items-center md:items-start gap-[54px]">
       <motion.div
@@ -19,8 +22,8 @@ export default function InfoCardSection(props: IInfoCardSectionProps) {
         transition={{ duration: 1, delay: 0.2 }}
       >
         <InfoCard
-          title="Your Wishlist, Our Mission"
-          description="Buyers can easily create a request for any item they desire, specifying their preferences and requirements."
+          title={t("card1_title")}
+          description={t("card1_description")}
           imageUrl={"/card/shopping_request.jpg"}
         />
       </motion.div>
@@ -35,8 +38,8 @@ export default function InfoCardSection(props: IInfoCardSectionProps) {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <InfoCard
-          title="Secure Transactions"
-          description="We safeguard both buyers and travelers, ensuring peace of mind and financial protection for all purchases and deals."
+          title={t("card2_title")}
+          description={t("card2_description")}
           imageUrl={"/card/secure_transection.png"}
         />
       </motion.div>
@@ -52,8 +55,8 @@ export default function InfoCardSection(props: IInfoCardSectionProps) {
         transition={{ duration: 1, delay: 0.7 }}
       >
         <InfoCard
-          title="Unlock a World of Possibilities"
-          description="Found an item that doesn't ship to you or takes too long? Concerned about pre-purchase quality? We've got you covered with our vast network of personal shoppers and travelers."
+          title={t("card3_title")}
+          description={t("card3_description")}
           imageUrl={"/card/plains.jpg"}
         />
       </motion.div>

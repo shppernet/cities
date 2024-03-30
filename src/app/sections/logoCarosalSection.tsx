@@ -1,15 +1,18 @@
 "use client";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import * as React from "react";
 import Marquee from "react-fast-marquee";
 export interface ILogoCarosalSectionProps {}
 
 export default function LogoCarosalSection(props: ILogoCarosalSectionProps) {
+  const localActive = useLocale();
+  const t = useTranslations("logo_carosal");
   return (
     <section className="pt-[50px] pb-[80px] px-10 flex flex-col flex-nowrap items-center justify-center gap-[50px] overflow-hidden">
       <div className="flex flex-nowrap flex-col gap-[50px] items-center">
         <h2 className="text-[25px] leading-[30px] font-medium text-[#1F3043]">
-          BUY YOUR ITEMS FROM
+          {t("title")}
         </h2>
         {/* carosal */}
 

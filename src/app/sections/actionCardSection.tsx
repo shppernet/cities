@@ -1,5 +1,6 @@
 import ActionCard from "@/components/Card/actionCard";
 import { appStoreLink, playStoreLink } from "@/helpers/socialLinks";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
@@ -7,19 +8,24 @@ import * as React from "react";
 export interface IActionCardSectionProps {}
 
 export default function ActionCardSection(props: IActionCardSectionProps) {
+  const localActive = useLocale();
+  const t = useTranslations("actionCards");
+  const join = useTranslations("join_now");
+
   return (
     <section className="flex flex-nowrap flex-col justify-center items-center gap-[10px] my-[120px] text-[#ededed] bg-[#ededed]">
       <div className="flex flex-nowrap flex-col justify-center items-center gap-[100px] py-[120px]">
         {/* card1 */}
 
         <ActionCard
-          title="Become a Personal Shopper"
-          description="Planning a trip or love shopping? Join Shpper, pick up items for buyers, and deliver them on your journey. Turn your travels and shopping sprees into earnings."
+          title={t("card1_title")}
+          description={t("card1_description")}
           imageUrl="/card/travel.webp"
+          containerClassName={localActive == "ar" ? "xl:flex-row-reverse" : ""}
         />
         <div className="flex items-center flex-col justify-center gap-6">
           <h1 className="font-bold text-2xl xl:text-[32px] xl:leading-[38px] leading-[29px] text-[#333333]">
-            Join Now
+            {join("title")}
           </h1>
           <div className="flex items-center gap-4">
             <Link
@@ -49,10 +55,10 @@ export default function ActionCardSection(props: IActionCardSectionProps) {
           </div>
         </div>
         <ActionCard
-          title="On Demand Marketplace"
-          description="Explore our marketplace where travelers share unique global finds. Like something? They’ll deliver it straight to your doorstep."
+          title={t("card2_title")}
+          description={t("card2_description")}
           imageUrl="/card/shopping.webp"
-          containerClassName="xl:flex-row-reverse"
+          containerClassName={localActive == "ar" ? "" : "xl:flex-row-reverse"}
         />
         {/* card2 */}
         {/* <div className="flex flex-col flex-nowrap gap-[30px] justify-center w-[286px] ">

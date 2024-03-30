@@ -14,9 +14,12 @@ import {
   playStoreLink,
   appStoreLink,
 } from "@/helpers/socialLinks";
+import { useLocale, useTranslations } from "next-intl";
 export interface IContactSectionProps {}
 
 export default function ContactSection(props: IContactSectionProps) {
+  const localActive = useLocale();
+  const t = useTranslations("footer");
   return (
     <section className="flex  justify-center gap-6 py-8 items-center">
       <div className="flex flex-col  justify-center gap-6 py-8 max-w-[1200px] w-full">
@@ -90,41 +93,41 @@ export default function ContactSection(props: IContactSectionProps) {
             <div className="flex gap-4 items-center justify-center md:font-medium text-sm md:text-base ">
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
-                href="/about-us"
+                href={`/${localActive}/about-us`}
               >
-                About Us
+                {t("about_us")}
               </Link>
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
-                href="/contact-us"
+                href={`/${localActive}/contact-us`}
               >
-                Contact Us
+                {t("contact_us")}
               </Link>
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
-                href="/faq"
+                href={`/${localActive}/faq`}
               >
-                FAQs
+                {t("faqs")}
               </Link>
             </div>
             <div className="flex gap-4 items-center justify-center  md:font-medium text-sm md:text-base">
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
-                href="/privacy-policy"
+                href={`/${localActive}/privacy-policy`}
               >
-                Privacy Policy
+                {t("privacy")}
               </Link>
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
-                href="/cookie-policy"
+                href={`/${localActive}/cookie-policy`}
               >
-                Cookie Policy
+                {t("cookie")}
               </Link>
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
-                href="/terms-conditions"
+                href={`/${localActive}/terms-conditions`}
               >
-                Terms & Conditions
+                {t("terms")}
               </Link>
             </div>
           </div>
@@ -134,7 +137,7 @@ export default function ContactSection(props: IContactSectionProps) {
               <div className="flex flex-col items-center flex-nowrap gap-6">
                 <div className="flex flex-col flex-nowrap gap-[10px] justify-center items-center">
                   <p className="text-sm font-bold leading-[150%] text-[#1F3043]">
-                    Follow Us On
+                    {t("follow_us")}
                   </p>
                   <div className="flex items-center justify-center gap-[10px]">
                     <Link href={instagramLink} className="cursor-pointer ">
@@ -158,7 +161,7 @@ export default function ContactSection(props: IContactSectionProps) {
             </div>
             <div className="flex flex-col flex-nowrap gap-[10px] justify-center items-center">
               <h5 className="font-bold text-sm leading-8 text-[#1f3043]">
-                Get The App
+                {t("get_the_app")}
               </h5>
               <div className="flex flex-col flex-nowrap gap-[15px] justify-center items-center">
                 <Link

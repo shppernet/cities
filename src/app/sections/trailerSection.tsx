@@ -9,9 +9,12 @@ import {
   youtubeThumbnailLink,
   youtubeTrailerLink,
 } from "@/helpers/socialLinks";
+import { useLocale, useTranslations } from "next-intl";
 export interface ITrailerSectionProps {}
 
 export default function TrailerSection(props: ITrailerSectionProps) {
+  const localActive = useLocale();
+  const t = useTranslations("Video");
   return (
     <motion.div
       className="xl:p-10 flex items-center justify-center gap-5 flex-col  flex-wrap
@@ -28,7 +31,7 @@ export default function TrailerSection(props: ITrailerSectionProps) {
       >
         <div className="flex flex-col  break-words whitespace-pre-wrap">
           <h1 className="text-2xl md:text-[38px] md:leading-[38px] font-semibold text-center leading-[29px] text-[#333333]">
-            Revolutionizing Global Shopping
+            {t("title")}
           </h1>
         </div>
         <div>
