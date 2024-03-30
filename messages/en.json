@@ -1,0 +1,59 @@
+{
+  "landing": {
+    "title": "Your Global <br /> Personal Shopper",
+    "description": "We connect buyers with trusted travelers. Buy from anywhere, and get it delivered by travelers."
+  },
+  "logo_carosal": {
+    "title": "BUY YOUR ITEMS FROM"
+  },
+  "infoCards": {
+    "card1_title": "Your Wishlist, Our Mission      ",
+    "card1_description": "Buyers can easily create a request for any item they desire, specifying their preferences and requirements.      ",
+
+    "card2_title": "Secure Transactions      ",
+    "card2_description": "We safeguard both buyers and travelers, ensuring peace of mind and financial protection for all purchases and deals.",
+
+    "card3_title": "Unlock a World of Possibilities",
+    "card3_description": "Found an item that doesn't ship to you or takes too long? Concerned about pre-purchase quality? We've got you covered with our vast network of personal shoppers and travelers."
+  },
+
+  "actionCards": {
+    "card1_title": "Become a Personal Shopper",
+    "card1_description": "Planning a trip or love shopping? Join Shpper, pick up items for buyers, and deliver them on your journey. Turn your travels and shopping sprees into earnings.",
+
+    "card2_title": "On Demand Marketplace",
+    "card2_description": "Explore our marketplace where travelers share unique global finds. Like something? They’ll deliver it straight to your doorstep."
+  },
+  "join_now": {
+    "title": "Join Now"
+  },
+  "Video": {
+    "title": "Revolutionizing Global Shopping    "
+  },
+  "footer": {
+    "about_us": "About Us",
+
+    "contact_us": "Contact Us",
+
+    "faqs": "FAQs",
+
+    "privacy": "Privacy Policy",
+
+    "cookie": "Cookie Policy",
+
+    "terms": "Terms & Conditions",
+
+    "follow_us": "Follow Us On",
+
+    "get_the_app": "Get the App"
+  },
+
+  "About_Us": {
+    "page_title": "About Us",
+    "title": "We're Here to Help",
+    "subtitle1": "Got questions, feedback, or assistance? We'd love to hear from you.Reaching us is just an email away.",
+    "subtitle2": "Reaching us is just an email away.",
+    "action_description": "For any inquiries, support needs, or just to say hello, Don't hesitate to contact us:",
+    "buttonText": "Click Here to Email Us"
+  }
+}
