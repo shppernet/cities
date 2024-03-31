@@ -5,6 +5,8 @@ import OurJourneySection from "./sections/ourJourneySection";
 import SecondaryNavbar from "@/components/Navbar/secondaryNavbar";
 import ContactSection from "@/app/sections/contactSection";
 
+export const runtime = "edge";
+
 export default function AboutPage() {
   return (
     <main className="overflow-hidden">

@@ -65,7 +65,7 @@ export default function ActionCardSection(props: IActionCardSectionProps) {
           <div className="relative overflow-hidden rounded-[20px] w-[280px] h-[250px]">
             <Image
               src={"/card/shopping.webp"}
-              layout="fill"
+               fill
               objectFit="cover"
               objectPosition="center"
               className="rounded-[20px]"

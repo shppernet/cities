@@ -1,4 +1,3 @@
-import PrimaryNavbar from "@/components/Navbar/primaryNavbar";
 import PrimaryFooter from "@/components/footer/primaryFooter";
 import GeneralTermsSection from "@/app/[locale]/terms-conditions/sections/generalTermsSection";
 
@@ -8,6 +7,9 @@ import { policyContent } from "@/content/privacyContent";
 import PolicyContent from "@/components/paragraph/policyContent";
 import SecondaryNavbar from "@/components/Navbar/secondaryNavbar";
 import ContactSection from "@/app/sections/contactSection";
+
+export const runtime = "edge";
+
 export default function PrivacyPolicyPagePage() {
   return (
     <main className="overflow-hidden">

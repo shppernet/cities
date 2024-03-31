@@ -6,6 +6,8 @@ import InfoCardSection from "@/app/sections/infoCardSection";
 import LogoCarosalSection from "@/app/sections/logoCarosalSection";
 import TrailerSection from "@/app/sections/trailerSection";
 import PrimaryFooter from "@/components/footer/primaryFooter";
+export const runtime = "edge";
+
 export default function Home() {
   return (
     <main className="overflow-hidden">

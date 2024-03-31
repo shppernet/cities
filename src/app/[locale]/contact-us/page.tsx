@@ -12,6 +12,9 @@ import ContactSection from "@/app/sections/contactSection";
 
 import ContactInfoSection from "./sections/ContactInfoSection";
 import { useLocale, useTranslations } from "next-intl";
+
+export const runtime = "edge";
+
 export default function ContactUsPagePage() {
   const localActive = useLocale();
   const t = useTranslations("About_Us");

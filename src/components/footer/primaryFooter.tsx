@@ -23,7 +23,7 @@ export default function PrimaryFooter(props: IPrimaryFooterProps) {
         <div className="flex flex-col   items-center gap-4   ">
           <div className="">
             <p className="text-xs lg:text-sm">
-              <span className="font-bold">Copyrights </span> 2023 All rights
+              <span className="font-bold">Copyrights </span> 2024 All rights
               reserved <span className="font-bold">Shpper.net</span>
             </p>
           </div>

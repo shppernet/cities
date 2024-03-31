@@ -16,7 +16,7 @@ export default function InfoCard(props: IInfoCardProps) {
       <div className="relative overflow-hidden rounded-[20px] max-w-[300px] xl:max-w-[320px] h-[250px]">
         <Image
           src={props.imageUrl}
-          layout="fill"
+          fill
           objectFit="cover"
           objectPosition="center"
           className="rounded-[20px]"

@@ -23,7 +23,7 @@ export default function ActionCard(props: IActionCardProps) {
       <div className="relative overflow-hidden rounded-[20px] w-[338px] h-[280px] xl:w-[460px] xl:h-[383px]">
         <Image
           src={props.imageUrl}
-          layout="fill"
+          fill
           objectFit="cover"
           objectPosition="center"
           className="rounded-[20px]"

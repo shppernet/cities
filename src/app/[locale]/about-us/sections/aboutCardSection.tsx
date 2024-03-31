@@ -26,13 +26,13 @@ export default function AboutCardSection(props: IAboutCardSectionProps) {
         <div className=" relative max-w-[680px] w-full h-[347px]  flex-shrink-[0] ">
           <Image
             src={"/card/plains.jpg"}
-            layout="fill"
+            fill
             alt="plains"
             className="w-full rounded-lg"
           />
           {/* <Image
           src={"/card/plains.jpg"}
-          layout="fill"
+           fill
           objectFit="cover"
           objectPosition="center"
           priority={true}

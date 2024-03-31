@@ -9,6 +9,8 @@ import { termsContent } from "@/content/termsContent";
 import SecondaryNavbar from "@/components/Navbar/secondaryNavbar";
 import ContactSection from "@/app/sections/contactSection";
 
+export const runtime = "edge";
+
 export default function FaqPage() {
   return (
     <main className="overflow-hidden">

@@ -7,6 +7,9 @@ import PolicyContent from "@/components/paragraph/policyContent";
 import { cookieContent } from "@/content/cookieContent";
 import SecondaryNavbar from "@/components/Navbar/secondaryNavbar";
 import ContactSection from "@/app/sections/contactSection";
+
+export const runtime = "edge";
+
 export default function CookiePolicyPagePage() {
   return (
     <main className="overflow-hidden">

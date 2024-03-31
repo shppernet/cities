@@ -4,6 +4,7 @@ import SecondaryNavbar from "@/components/Navbar/secondaryNavbar";
 import PrimaryFooter from "@/components/footer/primaryFooter";
 import ContactSection from "@/app/sections/contactSection";
 
+export const runtime = "edge";
 export default function FaqPage() {
   return (
     <main className="overflow-hidden">
