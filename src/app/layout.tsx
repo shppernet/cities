@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Shpper",
   description: "A Shopping Site",
 };
-
+export const runtime = "edge";
 export default function RootLayout({
   children,
 }: Readonly<{
