@@ -8,7 +8,7 @@ export const playStoreLink =
 export const appStoreLink = "https://apps.apple.com/us/app/shpper/id6450944256";
 export const youtubeThumbnailLink =
   "https://i.ytimg.com/vi_webp/sSbvw0zjJTY/maxresdefault.webp";
-export const youtubeTrailerLink = "https://www.youtube.com/watch?v=sSbvw0zjJTY";
+export const youtubeTrailerLink = "https://www.youtube.com/watch?v=ejmXlgmXq3k";
 export const mailLink = "info@shpper.net";
 export const phoneNumber = "+971 50 190 2914";
 export const receiverMail = "nahianhasan161@gmail.com";
