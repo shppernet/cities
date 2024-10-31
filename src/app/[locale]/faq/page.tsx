@@ -9,7 +9,11 @@ export default function FaqPage() {
   return (
     <main className="overflow-hidden">
       {/* <PrimaryNavbar title="FAQS" page1="HOME" page2="FAQS" /> */}
-      <SecondaryNavbar title="FAQS" />
+      <SecondaryNavbar
+        title="FAQS"
+        noButton={true}
+        className="pr-16 sm:pr-[6rem]"
+      />
 
       <FaqItems />
       <div className="mt-20">

@@ -2,7 +2,7 @@ import { termsContent } from "@/content/termsContent";
 import * as React from "react";
 
 interface termsType {
-  title: string;
+  title?: string;
   terms: string[];
 }
 export interface IGeneralTermsSectionProps {

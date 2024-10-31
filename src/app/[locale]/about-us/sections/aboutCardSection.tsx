@@ -67,12 +67,12 @@ export default function AboutCardSection(props: IAboutCardSectionProps) {
               >
                 <YoutubeIcon className="w-6 h-6 fill-[#303036] hover:fill-red-500" />
               </Link>
-              <Link href={facebookLink} className="cursor-pointer  ">
+              {/* <Link href={facebookLink} className="cursor-pointer  ">
                 <FbIcon className="w-5 h-5 fill-[#303036] hover:fill-blue-600 transition-all ease-in-out" />
-              </Link>
-              <Link href={snapchatLink} className="cursor-pointer ">
+              </Link> */}
+              {/*  <Link href={snapchatLink} className="cursor-pointer ">
                 <SnapIcon className="w-5 h-5 fill-[#303036] hover:fill-yellow-500  transition-all ease-in-out" />
-              </Link>
+              </Link> */}
               <Link href={linkedinLink} className="cursor-pointer ">
                 <LinkedInIcon className="w-5 h-5 fill-black hover:fill-blue-500 " />
               </Link>

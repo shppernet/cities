@@ -35,7 +35,8 @@ export default function PrimaryFooter(props: IPrimaryFooterProps) {
               alt="pci"
             />
             <p className="text-[8px]">
-              Shpper&apos;s payments and KYC Uses 256-Bit SSL Encryptio n<br />
+              Shpper&apos;s payments and KYC Uses 256-Bit SSL Encryption
+              <br />
               100% Of The Time On Every Device. PCI DSS V3.0 Compliant.
             </p>
           </div>
@@ -46,7 +47,7 @@ export default function PrimaryFooter(props: IPrimaryFooterProps) {
               We accept
             </h6>
             <Image
-              src="/payments/payments.svg"
+              src="/payments/Payment_Gateways_nobg.svg"
               height={18}
               width={240}
               alt="payment_options"

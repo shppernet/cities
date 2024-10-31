@@ -60,34 +60,6 @@ export default function ActionCardSection(props: IActionCardSectionProps) {
           imageUrl="/card/shopping.webp"
           containerClassName={localActive == "ar" ? "" : "xl:flex-row-reverse"}
         />
-        {/* card2 */}
-        {/* <div className="flex flex-col flex-nowrap gap-[30px] justify-center w-[286px] ">
-          <div className="relative overflow-hidden rounded-[20px] w-[280px] h-[250px]">
-            <Image
-              src={"/card/shopping.webp"}
-               fill
-              objectFit="cover"
-              objectPosition="center"
-              className="rounded-[20px]"
-              priority={true}
-              quality={100}
-              loading="eager"
-              unoptimized={true}
-              alt="shopping_request"
-            />
-          </div>
-
-          
-          <div className="flex flex-col flex-nowrap gap-[10px] ">
-            <h2 className=" font-semibold tracking-[-.7px] leading-[1.5em] text-[#001122]">
-              On Demand Marketplace
-            </h2>
-            <h3 className=" leading-6 tracking-[-0.6px] text-[#888888]">
-              Explore our marketplace where travelers share unique global finds.
-              Like something? They’ll deliver it straight to your doorstep.
-            </h3>
-          </div>
-        </div> */}
       </div>
     </section>
   );

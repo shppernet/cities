@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CloudIcon from "@/icons/logo/cloud_icon.svg";
@@ -9,12 +9,23 @@ import { useMemo } from "react";
 export interface IPrimaryNavbarProps {}
 
 export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const pathSegments = pathname.split("/").filter(Boolean);
+  const lastSegment = pathSegments[pathSegments.length - 1];
   const localActive = useLocale();
   const [isPending, startTransition] = React.useTransition();
-  const router = useRouter();
   const changeLanguge = (lang: string) => {
     startTransition(() => {
-      router.replace(`/${lang}`);
+      // Split the current pathname by "/" to get the segments
+      const pathSegments = pathname.split("/").filter(Boolean);
+
+      // Replace the language segment with the new language
+      pathSegments[0] = lang;
+
+      // Reconstruct the path with the updated language segment
+      const newPath = `/${pathSegments.join("/")}`;
+      router.replace(newPath);
     });
   };
 
