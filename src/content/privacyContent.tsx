@@ -690,7 +690,7 @@ export const policyContent = {
       description:
         "If you have any questions regarding the information we may hold about you or if you wish to exercise your rights, or if you have any other questions, concerns, or complaints regarding this Policy, we encourage you to contact us using the details below:",
       conclution:
-        "We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws. This document was last updated on October 27, 2024",
+        "We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.",
     },
     updateTime: "This document was last updated on October 27, 2024",
   },
