@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import { metropolisFont } from "@/fonts/fonts";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Shpper",
@@ -17,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${metropolisFont.variable} `}>
-        {children}
-      </body>
+      <body className={`${metropolisFont.variable} `}>{children}</body>
     </html>
   );
 }

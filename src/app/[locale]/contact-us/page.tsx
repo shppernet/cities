@@ -1,6 +1,5 @@
 import PrimaryNavbar from "@/components/Navbar/primaryNavbar";
 import PrimaryFooter from "@/components/footer/primaryFooter";
-import GeneralTermsSection from "@/app/[locale]/terms-conditions/sections/generalTermsSection";
 
 import ContactUsSection from "@/app/[locale]/terms-conditions/sections/contactUsSection";
 
@@ -21,18 +20,20 @@ export default function ContactUsPagePage() {
   return (
     <main className="overflow-hidden min-h-screen h-full flex flex-col">
       <SecondaryNavbar title={t("page_title")} />
-      <ContactInfoSection
-        title={t("title")}
-        subtitle1={t("subtitle1")}
-        subtitle2={t("subtitle2")}
-        action_description={t("action_description")}
-        buttonText={t("buttonText")}
-      />
-      {/* <ContactForm /> */}
-      <div className="mt-auto">
-        <ContactSection />
+      <div>
+        <ContactInfoSection
+          title={t("title")}
+          subtitle1={t("subtitle1")}
+          subtitle2={t("subtitle2")}
+          action_description={t("action_description")}
+          buttonText={t("buttonText")}
+        />
+        {/* <ContactForm /> */}
+        <div className="mt-auto">
+          <ContactSection />
 
-        <PrimaryFooter />
+          <PrimaryFooter />
+        </div>
       </div>
     </main>
   );

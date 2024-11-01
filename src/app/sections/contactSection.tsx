@@ -55,13 +55,13 @@ export default function ContactSection(props: IContactSectionProps) {
                 <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                   <p className="">SHPPER SOFTWARE DESIGN FZCO</p>
                   <p className="">Dubai Silicon Oasis</p>
-                  <p className="">IFZA Business Park, DDP</p>
+                  {/*    <p className="">IFZA Business Park, DDP</p> */}
                   <p className="">Dubai, UAE</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-nowrap gap-[10px]  items-center">
+            {/* <div className="flex flex-nowrap gap-[10px]  items-center">
               <Image
                 src={"/icons/mail_icon.svg"}
                 width={20}
@@ -71,8 +71,8 @@ export default function ContactSection(props: IContactSectionProps) {
               <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                 <p className="">Email: info@shpper.net</p>
               </div>
-            </div>
-            <div className="flex flex-nowrap gap-[10px]  items-center">
+            </div> */}
+            {/*  <div className="flex flex-nowrap gap-[10px]  items-center">
               <Image
                 src={"/icons/phone_icon.svg"}
                 width={20}
@@ -82,7 +82,7 @@ export default function ContactSection(props: IContactSectionProps) {
               <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                 <p className="">Phone: +971501902914</p>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* page links */}
           <div
@@ -110,12 +110,18 @@ export default function ContactSection(props: IContactSectionProps) {
                 {t("faqs")}
               </Link>
             </div>
-            <div className="flex gap-4 items-center justify-center  md:font-medium text-sm md:text-base">
+            <div className="flex gap-4 items-center justify-center  md:font-medium text-sm md:text-base flex-wrap">
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
                 href={`/${localActive}/privacy-policy`}
               >
                 {t("privacy")}
+              </Link>
+              <Link
+                className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
+                href={`/${localActive}/communication-policy`}
+              >
+                {t("communication")}
               </Link>
               <Link
                 className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
@@ -149,12 +155,12 @@ export default function ContactSection(props: IContactSectionProps) {
                     >
                       <YoutubeIcon className="w-6 h-6 fill-[#303036] hover:fill-red-500" />
                     </Link>
-                    <Link href={facebookLink} className="cursor-pointer  ">
+                    {/*    <Link href={facebookLink} className="cursor-pointer  ">
                       <FbIcon className="w-5 h-5 fill-[#303036] hover:fill-blue-600 transition-all ease-in-out" />
-                    </Link>
-                    <Link href={snapchatLink} className="cursor-pointer ">
+                    </Link> */}
+                    {/*  <Link href={snapchatLink} className="cursor-pointer ">
                       <SnapIcon className="w-5 h-5 fill-[#303036] hover:fill-yellow-500  transition-all ease-in-out" />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

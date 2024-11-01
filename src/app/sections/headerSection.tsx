@@ -91,8 +91,6 @@ export default function HeaderSection(props: IHeaderSectionProps) {
               >
                 {t("description")}
               </h2>
-              {/* We connect buyers with trusted travelers. Buy from anywhere, and
-                get it delivered by travelers. */}
             </div>
           </div>
           <div

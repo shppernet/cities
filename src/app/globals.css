@@ -11,6 +11,12 @@
 .react-player__preview {
   border-radius: 8px;
 }
+.arial-font {
+  font-family: Arial, sans-serif;
+}
+.inter-font {
+  font-family: Inter, sans-serif;
+}
 
 /* @media only screen and (min-width: 1200px) {
   .react-player__preview {

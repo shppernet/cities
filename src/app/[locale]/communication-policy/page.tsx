@@ -4,47 +4,40 @@ import GeneralTermsSection from "@/app/[locale]/terms-conditions/sections/genera
 import ContactUsSection from "@/app/[locale]/terms-conditions/sections/contactUsSection";
 
 import PolicyContent from "@/components/paragraph/policyContent";
-import { cookieContent } from "@/content/cookieContent";
-
+import { communicationContent } from "@/content/communicationContent";
 import SecondaryNavbar from "@/components/Navbar/secondaryNavbar";
 import ContactSection from "@/app/sections/contactSection";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 export const runtime = "edge";
 
-export default function CookiePolicyPagePage() {
+export default function CommunicationPolicyPagePage() {
   const localActive = useLocale();
-  const t = useTranslations("cookie_policy_content");
-
-  const content = localActive === "ar" ? cookieContent.ar : cookieContent.en;
-
+  const content =
+    localActive === "ar" ? communicationContent.ar : communicationContent.en;
   return (
     <main className="overflow-hidden">
-      {/* <PrimaryNavbar title="Cookie Policy" page1="HOME" page2="Cookie Policy" /> */}
-      {/* {localActive} */}
       <SecondaryNavbar title={content.title} />
       <div
         className="p-5 md:p-12 max-w-[1350px] mx-auto  leading-7 tracking-wide"
         dir={localActive === "ar" ? "rtl" : "ltr"}
       >
-        {/* <h1>{content.title}</h1> */}
+        {/*  <h2 className="text-[20px] pb-4 font-semibold mb-5 text-[#777777] mt-10">
+          Updated at May 7th,2023
+        </h2> */}
         <GeneralTermsSection terms={content.Introduction} />
-        <GeneralTermsSection terms={content.cookie} />
         <PolicyContent
           title={content.keyTerms.title}
           description={content.keyTerms.description}
           lists={content.keyTerms.lists}
         />
 
-        {/* <PolicyContent
-          title={content.cookieUse.title}
-          description={content.cookieUse.description}
-          lists={content.cookieUse.lists}
-        /> */}
+        <GeneralTermsSection terms={content.cookie} />
         <GeneralTermsSection terms={content.cookieType} />
         <GeneralTermsSection terms={content.cookieEssential} />
         <GeneralTermsSection terms={content.cookiePerformace} />
         <GeneralTermsSection terms={content.cookieMarketing} />
+        <GeneralTermsSection terms={content.cookieAnalytics} />
 
         <ContactUsSection
           title={content.contactUs.title}
