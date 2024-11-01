@@ -114,7 +114,7 @@ export const communicationContent = {
     },
   },
   ar: {
-    title: "سياسة الاتصالات",
+    title: "سياسة الاتصال",
     Introduction: {
       title: `قبول سياسة الاتصال`,
       terms: [
