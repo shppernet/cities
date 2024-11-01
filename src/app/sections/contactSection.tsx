@@ -54,9 +54,9 @@ export default function ContactSection(props: IContactSectionProps) {
                 />
                 <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                   <p className="">SHPPER SOFTWARE DESIGN FZCO</p>
-                  <p className="">Dubai Silicon Oasis</p>
+                  <p className="mr-[2rem] xl:mr-0">Dubai Silicon Oasis</p>
                   {/*    <p className="">IFZA Business Park, DDP</p> */}
-                  <p className="">Dubai, UAE</p>
+                  <p className="mr-[2rem] xl:mr-0">Dubai, UAE</p>
                 </div>
               </div>
             </div>
