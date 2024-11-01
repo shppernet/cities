@@ -43,9 +43,9 @@ export default function ContactSection(props: IContactSectionProps) {
         {/* details */}
         <div className="flex flex-col xl:flex-row gap-6  items-center justify-center flex-nowrap px-8 xl:justify-around ">
           {/* address */}
-          <div className="flex flex-col gap-4 flex-nowrap text-xs">
+          <div className="flex flex-col gap-4 flex-nowrap text-xs xl:self-start xl:mt-[3rem] order-1  xl:order-none">
             <div className="flex flex-col flex-nowrap gap-[10px]">
-              <div className="flex flex-nowrap gap-[10px] justify-center items-start">
+              <div className="flex flex-nowrap gap-[10px] justify-center text-center xl:text-start items-start order-3  xl:order-none">
                 <Image
                   src={"/icons/location-pin-svgrepo-com.svg"}
                   width={20}
@@ -54,9 +54,9 @@ export default function ContactSection(props: IContactSectionProps) {
                 />
                 <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                   <p className="">SHPPER SOFTWARE DESIGN FZCO</p>
-                  <p className="">Dubai Silicon Oasis</p>
+                  <p className="mr-[2rem] xl:mr-0">Dubai Silicon Oasis</p>
                   {/*    <p className="">IFZA Business Park, DDP</p> */}
-                  <p className="">Dubai, UAE</p>
+                  <p className="mr-[2rem] xl:mr-0">Dubai, UAE</p>
                 </div>
               </div>
             </div>
