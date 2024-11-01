@@ -11,6 +11,7 @@ import { useEffect, useRef } from "react";
 export interface IHeaderSectionProps {}
 
 export default function HeaderSection(props: IHeaderSectionProps) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const localActive = useLocale();
   const t = useTranslations("landing");
 
@@ -37,6 +38,12 @@ export default function HeaderSection(props: IHeaderSectionProps) {
         };
 
   /* {t("title")} */
+  useEffect(() => {
+    // Adjust playback speed when the component mounts
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; // 0.5x speed for slow motion
+    }
+  }, []);
   return (
     <header
       className="flex  flex-col items-center  gap-10 py-4 w-full  
@@ -44,6 +51,7 @@ export default function HeaderSection(props: IHeaderSectionProps) {
   "
     >
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
