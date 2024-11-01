@@ -55,13 +55,13 @@ export default function ContactSection(props: IContactSectionProps) {
                 <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                   <p className="">SHPPER SOFTWARE DESIGN FZCO</p>
                   <p className="">Dubai Silicon Oasis</p>
-                  <p className="">IFZA Business Park, DDP</p>
+                  {/*    <p className="">IFZA Business Park, DDP</p> */}
                   <p className="">Dubai, UAE</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-nowrap gap-[10px]  items-center">
+            {/* <div className="flex flex-nowrap gap-[10px]  items-center">
               <Image
                 src={"/icons/mail_icon.svg"}
                 width={20}
@@ -71,8 +71,8 @@ export default function ContactSection(props: IContactSectionProps) {
               <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                 <p className="">Email: info@shpper.net</p>
               </div>
-            </div>
-            <div className="flex flex-nowrap gap-[10px]  items-center">
+            </div> */}
+            {/*  <div className="flex flex-nowrap gap-[10px]  items-center">
               <Image
                 src={"/icons/phone_icon.svg"}
                 width={20}
@@ -82,7 +82,7 @@ export default function ContactSection(props: IContactSectionProps) {
               <div className="flex flex-col text-md leading-[150%] text-[#1E1515]">
                 <p className="">Phone: +971501902914</p>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* page links */}
           <div
