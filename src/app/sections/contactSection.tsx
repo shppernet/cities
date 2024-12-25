@@ -13,6 +13,7 @@ import {
   snapchatLink,
   playStoreLink,
   appStoreLink,
+  shopLink,
 } from "@/helpers/socialLinks";
 import { useLocale, useTranslations } from "next-intl";
 export interface IContactSectionProps {}
@@ -108,6 +109,12 @@ export default function ContactSection(props: IContactSectionProps) {
                 href={`/${localActive}/faq`}
               >
                 {t("faqs")}
+              </Link>
+              <Link
+                className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
+                href={shopLink}
+              >
+                {t("shop")}
               </Link>
             </div>
             <div className="flex gap-4 items-center justify-center  md:font-medium text-sm md:text-base flex-wrap">

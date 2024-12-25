@@ -4,17 +4,20 @@ import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CloudIcon from "@/icons/logo/cloud_icon.svg";
 import { useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useMemo } from "react";
+import { shopLink } from "@/helpers/socialLinks";
 export interface IPrimaryNavbarProps {}
 
 export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false); // State to toggle the navbar
   const pathSegments = pathname.split("/").filter(Boolean);
   const lastSegment = pathSegments[pathSegments.length - 1];
   const localActive = useLocale();
   const [isPending, startTransition] = React.useTransition();
+  const t = useTranslations("navbar");
   const changeLanguge = (lang: string) => {
     startTransition(() => {
       // Split the current pathname by "/" to get the segments
@@ -60,7 +63,7 @@ export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
         animate="visible"
         transition={{ duration: 1.5 }}
       >
-        <div className="relative flex justify-center items-center pl-[4rem] sm:pl-[6rem]">
+        <div className="relative flex justify-center items-center pl-[4rem] sm:pl-[7rem] md:pl-[14rem]">
           <div className="absolute text-white w-full flex justify-center items-center">
             <div className="overflow-hidden inline-flex relative w-full  h-[5rem] text-xl sm:text-3xl font-bold justify-center items-center mt-5">
               <AnimatePresence initial={false}>
@@ -97,9 +100,96 @@ export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
               </AnimatePresence>
             </div>
           </div>
+
           <CloudIcon className="md:w-[178px] md:h-[120px] w-[136px] h-[92px] " />
         </div>
       </motion.div>
+      {/* Hamburger Icon */}
+      <button
+        className="md:hidden focus:outline-none absolute z-10"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle Menu"
+      >
+        {isOpen ? (
+          <svg
+            className="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="w-6 h-6"
+          >
+            <path
+              d="M4 18L20 18"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 12L20 12"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 6L20 6"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        )}
+      </button>
+
+      {/* Desktop Navigation */}
+      <div className="hidden md:inline-flex items-center gap-5 shrink-0 mr-10">
+        <Link
+          className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
+          href={shopLink}
+        >
+          {t("shop")}
+        </Link>
+        <Link
+          className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
+          href={`/${localActive}/about-us`}
+        >
+          {t("about_us")}
+        </Link>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="flex flex-col items-center absolute top-[50px] gap-3 p-5 z-[1] md:hidden">
+          <Link
+            className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
+            href={shopLink}
+          >
+            {t("shop")}
+          </Link>
+          <Link
+            className="cursor-pointer hover:scale-[102%] transition-all ease-in-out"
+            href={`/${localActive}/about-us`}
+          >
+            {t("about_us")}
+          </Link>
+        </div>
+      )}
+
       <div className="flex items-center text-xs md:text-base">
         <div
           className={`flex justify-center items-center py-1 sm:py-2 sm:pr-5 pr-3 pl-5 sm:pl-7  rounded-l-full transition-all duration-300 ease-in cursor-pointer ${
