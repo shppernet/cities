@@ -7,10 +7,11 @@ import { appStoreLink, playStoreLink } from "@/helpers/socialLinks";
 import { useLocale, useTranslations } from "next-intl";
 import PrimaryNavbar from "@/components/Navbar/primaryNavbar";
 import { cn } from "@/helpers/utills";
-
+import { useEffect, useRef } from "react";
 export interface IHeaderSectionProps {}
 
 export default function HeaderSection(props: IHeaderSectionProps) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const localActive = useLocale();
   const t = useTranslations("landing");
 
@@ -37,12 +38,30 @@ export default function HeaderSection(props: IHeaderSectionProps) {
         };
 
   /* {t("title")} */
+  useEffect(() => {
+    // Adjust playback speed when the component mounts
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; // 0.5x speed for slow motion
+    }
+  }, []);
   return (
     <header
       className="flex  flex-col items-center  gap-10 py-4 w-full  
-  bg-[url('/images/cloud_bg.webp')] bg-no-repeat bg-cover bg-center
+   
   "
     >
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+      >
+        {" "}
+        <source src="/bg/videos/cloud.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <PrimaryNavbar />
       {/* contents */}
       <div className="flex flex-col md:pl-[5rem] md:flex-row-reverse items-center justify-center md:pb-0 pb-10">
