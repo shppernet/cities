@@ -12,3 +12,4 @@ export const youtubeTrailerLink = "https://www.youtube.com/watch?v=ejmXlgmXq3k";
 export const mailLink = "info@shpper.net";
 export const phoneNumber = "+971 50 190 2914";
 export const receiverMail = "nahianhasan161@gmail.com";
+export const shopLink = "http://www.shpper.shop";

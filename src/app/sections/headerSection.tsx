@@ -55,11 +55,11 @@ export default function HeaderSection(props: IHeaderSectionProps) {
           className={localActive == "ar" ? "md:order-1" : ""}
         >
           <Image
-            src="/images/hero_23.png"
+            src="/images/hero_mobile.png"
             alt="appScreens"
             width={601}
             height={538}
-            className="w-[380px] h-[336px] xl:w-[601px] xl:h-[538px] ml-[2rem]  md:ml-[0px]"
+            className="w-[380px] h-[336px] xl:w-[540px] xl:h-[500px] ml-[2rem]  md:ml-[0px]"
           />
         </motion.div>
         <motion.div

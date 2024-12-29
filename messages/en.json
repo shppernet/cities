@@ -30,6 +30,10 @@
   "Video": {
     "title": "Revolutionizing Global Shopping    "
   },
+  "navbar": {
+    "shop": "Shpper Shop",
+    "about_us": "About Us"
+  },
   "footer": {
     "about_us": "About Us",
 
@@ -45,7 +49,7 @@
     "terms": "Terms & Conditions",
 
     "follow_us": "Follow Us On",
-
+    "shop": "Shpper Shop",
     "get_the_app": "Get the App"
   },
 
