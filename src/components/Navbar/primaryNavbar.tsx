@@ -156,9 +156,13 @@ export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
       </button>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:inline-flex items-center gap-5 shrink-0 lg:mr-10 md:mr-4 font-medium leading-[30px]">
+      <div
+        className={`hidden md:inline-flex items-center gap-5 shrink-0 lg:mr-10 md:mr-4  leading-[30px] ${
+          localActive == "en" ? "font-medium " : " font-semibold text-[#1F3043]"
+        }`}
+      >
         <Link
-          className="relative z-10   cursor-pointer hover:text-[#D9B705] transition-all ease-in-out"
+          className="relative z-10  cursor-pointer hover:text-[#D9B705] transition-all ease-in-out"
           href={shopLink}
         >
           <div>{t("shop")}</div>
