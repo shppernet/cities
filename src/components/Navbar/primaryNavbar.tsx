@@ -4,11 +4,14 @@ import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CloudIcon from "@/icons/logo/cloud_icon.svg";
 import { useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useMemo } from "react";
+import { shopLink } from "@/helpers/socialLinks";
 export interface IPrimaryNavbarProps {}
 
 export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("navbar");
   const router = useRouter();
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter(Boolean);
@@ -60,7 +63,7 @@ export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
         animate="visible"
         transition={{ duration: 1.5 }}
       >
-        <div className="relative flex justify-center items-center pl-[4rem] sm:pl-[6rem]">
+        <div className="relative flex justify-center items-center pl-[4rem] sm:pl-[7rem] md:pl-[14rem]">
           <div className="absolute text-white w-full flex justify-center items-center">
             <div className="overflow-hidden inline-flex relative w-full  h-[5rem] text-xl sm:text-3xl font-bold justify-center items-center mt-5">
               <AnimatePresence initial={false}>
@@ -99,6 +102,116 @@ export default function PrimaryNavbar(props: IPrimaryNavbarProps) {
           </div>
           <CloudIcon className="md:w-[178px] md:h-[120px] w-[136px] h-[92px] " />
         </div>
+      </motion.div>
+      {/* Hamburger Icon */}
+      <button
+        className="md:hidden focus:outline-none absolute z-10"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle Menu"
+      >
+        {isOpen ? (
+          <svg
+            className="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="w-6 h-6"
+          >
+            <path
+              d="M4 18L20 18"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 12L20 12"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 6L20 6"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        )}
+      </button>
+
+      {/* Desktop Navigation */}
+      <div className="hidden md:inline-flex items-center gap-5 shrink-0 lg:mr-10 md:mr-4 font-medium leading-[30px]">
+        <Link
+          className="relative z-10   cursor-pointer hover:text-[#D9B705] transition-all ease-in-out"
+          href={shopLink}
+        >
+          <div>{t("shop")}</div>
+        </Link>
+        <Link
+          className=" relative z-10 cursor-pointer hover:text-[#D9B705] transition-all ease-in-out"
+          href={`/${localActive}/about-us`}
+        >
+          {t("about_us")}
+        </Link>
+      </div>
+
+      {/* Sidebar for Mobile Navigation */}
+      <motion.div
+        className="fixed inset-y-0 left-0 w-[75%] bg-white shadow-lg z-50 flex flex-col gap-4 p-5 transform md:hidden"
+        initial={{ x: "-100%" }}
+        animate={{ x: isOpen ? "0%" : "-100%" }}
+        transition={{ duration: 0.3 }}
+      >
+        <button
+          className="self-end p-2"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close Menu"
+        >
+          <svg
+            className="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <Link
+          href={shopLink}
+          className="text-lg font-medium hover:text-[#D9B705] transition-all ease-in-out"
+          onClick={() => setIsOpen(false)}
+        >
+          {t("shop")}
+        </Link>
+        <Link
+          href={`/${localActive}/about-us`}
+          className="text-lg font-medium hover:text-[#D9B705] transition-all ease-in-out"
+          onClick={() => setIsOpen(false)}
+        >
+          {t("about_us")}
+        </Link>
       </motion.div>
       <div className="flex items-center text-xs md:text-base">
         <div
