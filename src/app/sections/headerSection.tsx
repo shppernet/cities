@@ -59,7 +59,7 @@ export default function HeaderSection(props: IHeaderSectionProps) {
             alt="appScreens"
             width={601}
             height={538}
-            className="w-[380px] h-[336px] xl:w-[540px] xl:h-[500px] ml-[2rem]  md:ml-[0px]"
+            className="w-[380px] h-[336px] xl:w-[540px] xl:h-[500px] md:ml-[0px]"
           />
         </motion.div>
         <motion.div
