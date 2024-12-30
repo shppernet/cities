@@ -11,7 +11,7 @@ export default function LogoCarosalSection(props: ILogoCarosalSectionProps) {
   return (
     <section className="pt-[50px] pb-[80px] px-10 flex flex-col flex-nowrap items-center justify-center gap-[50px] overflow-hidden">
       <div className="flex flex-nowrap flex-col gap-[50px] items-center">
-        <h2 className="text-[25px] leading-[30px] font-medium text-[#1F3043]">
+        <h2 className="text-lg md:text-[25px] leading-[30px] font-medium text-[#1F3043]">
           {t("title")}
         </h2>
         {/* carosal */}
