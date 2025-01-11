@@ -5,7 +5,8 @@ import HeaderSection from "@/app/sections/headerSection";
 import InfoCardSection from "@/app/sections/infoCardSection";
 import LogoCarosalSection from "@/app/sections/logoCarosalSection";
 import TrailerSection from "@/app/sections/trailerSection";
-import PrimaryFooter from "@/components/footer/primaryFooter";
+import PrimaryFooter from "@/components/footer/primaryFooter"
+import NewsSection from "@/app/sections/newsSection";
 export const runtime = "edge";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <InfoCardSection />
       <ActionCardSection />
       <TrailerSection />
+      <NewsSection />
       <ContactSection />
       <PrimaryFooter />
     </main>
