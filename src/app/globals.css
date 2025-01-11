@@ -17,11 +17,105 @@
 .inter-font {
   font-family: Inter, sans-serif;
 }
-
-/* @media only screen and (min-width: 1200px) {
-  .react-player__preview {
-    width: 950px;
-    height: 538px;
+.brandpush-logo-container-item {
+  height: auto;
+  width: 100%;
+  position: relative;
+  padding: 25px 50px;
+}
+.brandpush-vertical-center {
+  height: inherit;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.brandpush-vertical-center img.brandpush-news-logo {
+  max-width: 100px;
+  max-height: 66px;
+  min-width: 50px;
+  min-height: 14px;
+  height: auto;
+  width: auto;
+  margin: 7px 10px;
+  overflow: visible;
+}
+.brandpush-trust-badge,
+.brandpush-title,
+.brandpush-footer {
+  font-family: sans-serif !important;
+}
+.brandpush-title:before,
+.brandpush-title:after {
+  content: '';
+  flex: 1 1;
+  border-bottom: 1px solid #d8d8d8;
+  margin: auto;
+  width: 27%;
+  display: block;
+  position: relative;
+}
+.brandpush-title:before {
+  margin-left: 30px;
+  top: 12px;
+}
+.brandpush-title:after {
+  margin-right: 30px;
+  top: -13px;
+}
+@media screen and (min-width: 585px) {
+  .brandpush-logo-container {
+    padding: 0 20px;
   }
-} */
-/* w-[336px] h-[228px]  md:w-[714] md:h-[38px] xl:w-[950] xl:h-[538px] */
+}
+@media screen and (max-width: 584px) {
+  .brandpush-news-logo {
+    max-width: 70px !important;
+  }
+  .brandpush-title {
+    font-size: 15px;
+    top: -5px;
+    letter-spacing: 6px;
+  }
+  .brandpush-title:before,
+  .brandpush-title:after {
+    border-bottom: none !important;
+  }
+  .brandpush-leaf {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 340px) {
+  .brandpush-title-hr {
+    display: none !important;
+  }
+  .brandpush-title {
+    font-size: 14px;
+    padding: 0 !important;
+  }
+  .brandpush-footer {
+    font-size: 11px !important;
+    margin: 20px 0 25px 0 !important;
+    letter-spacing: 2px !important;
+  }
+  .brandpush-news-logo {
+    max-width: 50px !important;
+  }
+}
+.brandpush-logo-container {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.brandpush-newslogos {
+  display: inline-block;
+  position: relative;
+}
+
