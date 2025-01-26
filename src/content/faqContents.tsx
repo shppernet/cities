@@ -9,7 +9,7 @@ export const faqs = [
   },
 
   {
-    title: "What is your return policy? ",
+    title: "Do you accept returns?",
     ans: "Yes, we do accept returns.",
   },
   {
