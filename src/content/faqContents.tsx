@@ -10,7 +10,7 @@ export const faqs = [
 
   {
     title: "What is your return policy? ",
-    ans: "As our service is personalized and based on customer requests, we do not accept returns. This is mentioned in our return policy and terms and conditions.",
+    ans: "Yes, we do accept returns.",
   },
   {
     title:
