@@ -26,11 +26,11 @@ export default function ContactInfoSection(props: IContactInfoSectionProps) {
           {props.title}
         </h1>
 
-        <p>{props.subtitle1}</p>
+        <p dangerouslySetInnerHTML={props.subtitle1}></p>
 
         <p>{props.subtitle2}</p>
 
-        <p className="pt-10">{props.action_description}</p>
+       {/*  <p className="pt-10">{props.action_description}</p> */}
 
         <a
           onClick={() => setIsModal(true)}
