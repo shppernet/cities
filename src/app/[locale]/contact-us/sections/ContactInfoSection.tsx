@@ -26,7 +26,7 @@ export default function ContactInfoSection(props: IContactInfoSectionProps) {
           {props.title}
         </h1>
 
-        <p dangerouslySetInnerHTML={props.subtitle1}></p>
+        <p dangerouslySetInnerHTML={props.subtitle1}>&nbsp;</p>
 
         <p>{props.subtitle2}</p>
 
