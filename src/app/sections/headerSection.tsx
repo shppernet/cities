@@ -55,7 +55,7 @@ export default function HeaderSection(props: IHeaderSectionProps) {
           className={localActive == "ar" ? "md:order-1" : ""}
         >
           <Image
-            src="/images/hero_mobile.png"
+            src="/images/Shpper_header_Img.png"
             alt="appScreens"
             width={601}
             height={538}
