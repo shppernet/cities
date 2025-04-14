@@ -363,12 +363,13 @@ export const termsContent = {
           ],
         },
         {
-          topic: "	VAT, Customs, and other taxes:",
+          topic: "	VAT, Customs, and other fees:",
           description: [
             "It is forbidden to transport any items considered prohibited under the customs laws of the country of departure or arrival , or under the relevant airline regulations or aviation laws. The Traveler assumes full responsibility for verifying and complying with these laws and regulations, declaring any items whose value exceeds the minimum customs threshold set by the relevant authorities at both the departure and destination points, and pay the appropriate customs duties, if required.",
             "The Customer agrees that if the value of the item being transported exceeds the customs disclosure threshold at the destination, and the Traveler has paid any applicable customs duties, the Customer hereby undertakes to reimburse the Traveler for such charges, with proof provided by the Traveler, as necessary.",
             "Shpper is only responsible for collecting VAT on the service fees and commissions directly earned by the platform, not on the goods exchanged between users.",
             "Shpper is only responsible for collecting VAT on the service fees and commissions directly earned by the platform, not on the goods exchanged between users.",
+            "Orders containing liquids, tobacco, or medicine are subject to extra delivery fees and delays (up to 10 additional days). Fees are as follows: AED 30 for up to 1kg, AED 20/kg for 1–5kg, and AED 15/kg for anything above 5kg. By accepting an offer with such items, you agree to these charges."
           ],
         },
         {
