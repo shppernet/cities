@@ -59,8 +59,8 @@ export default function FaqPage() {
         /> */}
         <p className="text-[#777777] space-y-4 pb-10">
           {localActive === "ar"
-            ? `آخر تحديث بتاريخ: 15 أبريل 2025`
-            : `Last updated on: 15th April 2025`}
+            ? `آخر تحديث بتاريخ: 31 مارس 2025` 
+            : `Last updated on: 31st March 2025`}
         </p>
       </div>
       <ContactSection />
